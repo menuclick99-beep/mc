@@ -563,23 +563,33 @@ Es lo que hace que el cliente diga:
     </div>
 </div>
 
-<a href="https://wa.me/5491123140119" class="whatsapp-float">📞</a>
 
-<footer id="contacto">
-  © MenuClick<br>
-  📞 +54 9 11 2314-0119
+
+<footer>
+    © MenuClick – Cartas Digitales Profesionales
 </footer>
-
 <script>
-let i=0;
-const imgs=document.querySelectorAll('.mockup-phone-carousel img');
 
-setInterval(()=>{
- imgs[i].classList.remove('active');
- i=(i+1)%imgs.length;
- imgs[i].classList.add('active');
+let index = 0;
+const imgs = document.querySelectorAll('.mockup-phone-carousel img');
+
+setInterval(() => {
+
+imgs[index].classList.remove('active');
+
+index = (index + 1) % imgs.length;
+
+imgs[index].classList.add('active');
+
 },3000);
+
 </script>
+
+  <!-- FOOTER -->
+  <footer id="contacto">
+    © 2025 MenuClick — Soluciones Gastronómicas Digitales<br>
+    ✉️ isaiascoronelnavarro@outlook.com · 📞 +54 9 11 2314-0119
+  </footer>
 
 </body>
 </html>
