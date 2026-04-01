@@ -27,19 +27,27 @@
         }
 
         /* HERO */
-        .hero {
-            background: linear-gradient(to bottom, #0b2e63, #09254f);
-            color: white;
-            padding: 80px 20px;
-            text-align: center;
-            overflow: hidden;
-            animation: heroMove 5s ease-in-out infinite alternate;
-        }
+   .hero-logo{
+  width:120px;
+  border-radius:30px;
+  border:3px solid var(--dorado);
+  margin-bottom:20px;
+  animation: float 4s ease-in-out infinite, glow 3s infinite alternate;
+}
 
-        @keyframes heroMove {
-            from { background-position: 0% 0%; }
-            to   { background-position: 0% 12%; }
-        }
+.hero-content{
+  max-width:500px;
+}
+
+.tagline{
+  color:var(--dorado);
+  font-weight:bold;
+}
+
+.mini-text{
+  font-size:0.9rem;
+  opacity:0.8;
+}
 
         /* ⭐ LOGO OVALADO */
         .hero-logo {
