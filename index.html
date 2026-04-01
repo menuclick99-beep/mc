@@ -1,12 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MenuClick - Cartas Digitales que Venden</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
 <style>
-:root {
+:root{
   --azul:#0b2e63;
   --azul2:#004aad;
   --dorado:#c19f78;
   --gris:#f4f6f9;
 }
 
-/* BASE */
 body{
   margin:0;
   font-family:'Roboto',sans-serif;
@@ -59,6 +67,7 @@ header{
   font-size:1rem;
 }
 
+/* BOTONES */
 .btn-principal{
   background:var(--dorado);
   color:white;
@@ -70,10 +79,43 @@ header{
   text-decoration:none;
 }
 
-/* SECTION */
+.btn-demo{
+  background:var(--azul);
+  color:white;
+  padding:14px 25px;
+  border-radius:10px;
+  display:inline-block;
+  margin-top:15px;
+  font-weight:bold;
+  text-decoration:none;
+}
+
+/* SECCIONES */
 .section{
   padding:50px 15px;
   text-align:center;
+}
+
+.section h2{
+  color:var(--azul);
+}
+
+/* BENEFICIOS */
+.benefits-list{
+  display:flex;
+  flex-wrap:wrap;
+  gap:15px;
+  justify-content:center;
+}
+
+.benefit-card{
+  background:white;
+  border-radius:12px;
+  padding:20px;
+  width:280px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+  border-top:4px solid var(--dorado);
+  text-align:left;
 }
 
 /* BLOQUES */
@@ -84,16 +126,6 @@ header{
   box-shadow:0 5px 15px rgba(0,0,0,0.08);
 }
 
-/* CARDS */
-.card{
-  background:white;
-  border-radius:12px;
-  padding:20px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.08);
-  border-top:4px solid var(--dorado);
-}
-
-/* BENEFICIOS COLOREADOS */
 .colored-benefit p{
   background:#eef4ff;
   padding:12px;
@@ -109,6 +141,15 @@ header{
   font-size:1.2rem;
 }
 
+/* CARDS */
+.card{
+  background:white;
+  border-radius:12px;
+  padding:20px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+  border-top:4px solid var(--dorado);
+}
+
 /* TABLA */
 table{
   width:100%;
@@ -120,6 +161,31 @@ th{
 }
 td,th{
   padding:10px;
+}
+
+/* MOCKUP */
+.mockup-phone{
+  max-width:280px;
+  margin:30px auto;
+}
+.mockup-phone-carousel{
+  position:relative;
+  width:100%;
+  height:500px;
+  overflow:hidden;
+  border-radius:20px;
+  background:#000;
+}
+.mockup-phone-carousel img{
+  position:absolute;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  opacity:0;
+  transition:.6s;
+}
+.mockup-phone-carousel img.active{
+  opacity:1;
 }
 
 /* WHATSAPP */
@@ -139,27 +205,132 @@ td,th{
   text-decoration:none;
 }
 
-/* MOBILE PRO */
+/* FOOTER */
+footer{
+  background:#111;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
+
+/* MOBILE */
 @media(max-width:768px){
 
-  .hero{
-    padding:40px 15px;
-  }
+.hero{
+  padding:40px 15px;
+}
 
-  .hero h1{
-    font-size:1.4rem;
-  }
+.hero h1{
+  font-size:1.4rem;
+}
 
-  .benefits-box{
-    padding:15px;
-  }
+.benefit-card{
+  width:100%;
+}
 
-  .card{
-    margin-bottom:15px;
-  }
+table{
+  font-size:0.85rem;
+}
 
-  table{
-    font-size:0.85rem;
-  }
 }
 </style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <img src="img/logo10.png">
+    <div>
+      <a href="#demo">Demo</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <img src="img/logo10.png">
+  <h1>Cartas Digitales que Venden a Primera Vista</h1>
+  <p>Mostrá tus platos como se merecen y hacé que el cliente pida más.</p>
+  <a href="https://wa.me/5491123140119" class="btn-principal">Quiero mi Demo Gratis</a>
+</section>
+
+<div class="section">
+  <h2>Problemas vs Solución</h2>
+
+  <div class="benefits-list">
+
+    <div class="benefit-card">
+      <strong>🚫 PDF lento</strong>
+      <p>El cliente se frustra y tarda en elegir.</p>
+    </div>
+
+    <div class="benefit-card">
+      <strong>🚫 Turistas no entienden</strong>
+      <p>Se pierden ventas.</p>
+    </div>
+
+    <div class="benefit-card">
+      <strong>✅ MenuClick</strong>
+      <p>Rápido, visual y con traducción automática.</p>
+    </div>
+
+  </div>
+</div>
+
+<div class="section emotional">
+  “Tu carta no es una lista de precios. Es lo que hace que el cliente diga: acá quiero comer.”
+</div>
+
+<div class="section" id="demo">
+  <h2>Ver Demo</h2>
+  <a href="https://tilo-restocafe.github.io/cartaaguero/" class="btn-demo">Abrir Carta</a>
+
+  <div class="mockup-phone">
+    <div class="mockup-phone-carousel">
+      <img src="img/mockup-tilo.jpg" class="active">
+      <img src="img/modo dos.png">
+      <img src="img/menuclicklogo.png">
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Beneficios</h2>
+  <div class="benefits-box colored-benefit">
+    <p>📈 Aumenta ventas</p>
+    <p>⚡ Más rápido</p>
+    <p>🌎 Ideal turistas</p>
+    <p>💼 Imagen pro</p>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Cómo funciona</h2>
+
+  <div class="card">1️⃣ Escribís</div>
+  <div class="card">2️⃣ Armamos tu carta</div>
+  <div class="card">3️⃣ Vendés más</div>
+
+</div>
+
+<a href="https://wa.me/5491123140119" class="whatsapp-float">📞</a>
+
+<footer id="contacto">
+  © MenuClick<br>
+  📞 +54 9 11 2314-0119
+</footer>
+
+<script>
+let i=0;
+const imgs=document.querySelectorAll('.mockup-phone-carousel img');
+
+setInterval(()=>{
+ imgs[i].classList.remove('active');
+ i=(i+1)%imgs.length;
+ imgs[i].classList.add('active');
+},3000);
+</script>
+
+</body>
+</html>
