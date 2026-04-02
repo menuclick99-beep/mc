@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MenuClick - Cartas Digitales Profesionales</title>
-
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
     <style>
@@ -13,6 +12,7 @@
             margin: 0;
             color: #333;
             background: linear-gradient(to bottom, #f2f2f2, #e6e6e6, #d9d9d9);
+            position: relative;
             overflow-x: hidden;
         }
 
@@ -20,85 +20,170 @@
             position: fixed;
             bottom: 20px;
             right: 20px;
+            opacity: 0.08;
             width: 120px;
-            opacity: .08;
+            z-index: 999;
             pointer-events: none;
-            z-index: 1000;
         }
 
         /* HERO */
         .hero {
             background: linear-gradient(to bottom, #0b2e63, #09254f);
-            color: #fff;
+            color: white;
             padding: 80px 20px;
             text-align: center;
+            overflow: hidden;
+            animation: heroMove 5s ease-in-out infinite alternate;
         }
 
+        @keyframes heroMove {
+            from { background-position: 0% 0%; }
+            to   { background-position: 0% 12%; }
+        }
+
+        /* ⭐ LOGO OVALADO */
         .hero-logo {
             width: 180px;
             height: 180px;
-            border-radius: 50%;
             object-fit: cover;
-            border: 4px solid rgba(255, 255, 255, .15);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, .3);
+            border-radius: 50%;
+            border: 4px solid rgba(255, 255, 255, 0.041);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
             animation: float 4s ease-in-out infinite;
         }
 
         @keyframes float {
-            0% { transform: translateY(0) }
-            50% { transform: translateY(-8px) }
-            100% { transform: translateY(0) }
+            0%   { transform: translateY(0px) scale(1); }
+            50%  { transform: translateY(-6px) scale(1.02); }
+            100% { transform: translateY(0px) scale(1); }
         }
 
         .hero h1 {
             font-size: 2.4rem;
             margin-top: 20px;
-            text-shadow: 0 6px 18px rgba(0, 0, 0, .25);
-            line-height: 1.2;
-        }
-
-        .hero p {
-            text-shadow: 0 3px 10px rgba(0, 0, 0, .25);
-            max-width: 600px;
-            margin: 20px auto;
         }
 
         .btn-principal {
-            background: #fff;
+            background-color: rgb(179, 177, 177);
             color: #0b2e63;
             padding: 14px 30px;
             border-radius: 10px;
             font-weight: bold;
             text-decoration: none;
             display: inline-block;
-            margin-top: 25px;
-            transition: transform 0.2s ease;
+            margin-top: 20px;
         }
 
-        .btn-principal:hover {
-            transform: scale(1.05);
-        }
-
-        /* SECTIONS */
         .section {
+            padding: 60px 20px;
             max-width: 1000px;
             margin: auto;
-            padding: 60px 20px;
+            opacity: 0;
+            transform: translateY(40px);
+            animation: fadeIn 1.3s forwards;
         }
 
-        /* BENEFITS */
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+
+        /* ⭐ BENEFICIOS CON MOCKUP ESTILO CELULAR */
         .benefits-box {
-            background: #fff;
+            background: rgb(74, 103, 146);
             padding: 25px;
-            border-radius: 14px;
-            box-shadow: 0 6px 18px rgba(0, 0, 0, .12);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.12);
             display: flex;
             gap: 25px;
             flex-wrap: wrap;
-            align-items: center;
         }
 
-        .benefits-text { flex: 1; min-width: 280px; }
+        .benefits-text { flex: 1; }
+
+        .mockup-phone {
+            width: 260px;
+            border-radius: 30px;
+            padding: 12px;
+            background: #111;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .mockup-phone img {
+            width: 100%;
+            border-radius: 20px;
+        }
+
+        /* ⭐ SECCION EMOCIONAL */
+        .emotional {
+            background: rgb(91, 179, 19);
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .emotional p {
+            font-size: 1.3rem;
+            color: #0b2e63;
+            font-weight: 500;
+            line-height: 1.6;
+        }
+
+        /* ⭐ TESTIMONIOS */
+        .testimonials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .test-card {
+            background: #fdfcfc;
+            padding: 20px;
+            border-radius: 12px;
+            flex: 1;
+            min-width: 250px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+            border-left: 6px solid #0b2e63;
+        }
+
+        .test-card p { font-size: 1rem; }
+
+        .btn-ver-carta {
+            background: #0b2e63;
+            color: white;
+            padding: 14px 28px;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 25px;
+        }
+
+        footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 50px;
+        }
+            .benefits-text p:nth-child(1),
+        .benefits-text p:nth-child(2) {
+            background:#ffdddd;
+            padding:12px;
+            border-radius:10px;
+            margin-bottom:10px;
+        }
+        .benefits-text p:nth-child(4),
+        .benefits-text p:nth-child(5) {
+            background:#ddffdd;
+            padding:12px;
+            border-radius:10px;
+            margin-bottom:10px;
+        }
 
         .colored-benefit p {
             background: #e8f0ff;
@@ -107,156 +192,165 @@
             margin-bottom: 12px;
         }
 
-        /* MOCKUP */
-        .mockup-phone {
-            background: #111;
-            padding: 14px;
-            border-radius: 28px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
-            margin: 0 auto;
-        }
+        .colored-benefit p { background:#e8f0ff; padding:14px; border-radius:12px; margin-bottom:12px; }
+        .benefits-box p { animation: fadeIn 1s ease-in-out forwards; opacity:0; }
+        .benefits-box p:nth-child(1){animation-delay:0.1s;} .benefits-box p:nth-child(2){animation-delay:0.2s;} .benefits-box p:nth-child(3){animation-delay:0.3s;} .benefits-box p:nth-child(4){animation-delay:0.4s;} .benefits-box p:nth-child(5){animation-delay:0.5s;}
 
-        .mockup-phone-carousel {
-            position: relative;
-            width: 260px;
-            height: 460px;
-            overflow: hidden;
-            border-radius: 22px;
-            background: #000;
-        }
-
-        .mockup-phone-carousel img {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-        }
-
-        .mockup-phone-carousel img.active { opacity: 1; }
-
-        /* EMOTIONAL */
-        .emotional {
-            background: #9c9bff;
-            padding: 40px;
-            border-radius: 14px;
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .emotional p {
-            font-size: 1.3rem;
-            color: #0b2e63;
-            font-weight: 500;
-        }
-
-        /* BUTTON */
-        .btn-ver-carta {
-            background: #0b2e63;
-            color: #fff;
-            padding: 14px 28px;
-            border-radius: 10px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 20px;
-        }
-
-        /* RESPONSIVE */
-        @media(max-width:768px){
-            .hero h1 { font-size: 1.8rem; }
-            .benefits-box { flex-direction: column; align-items: center; text-align: left; }
-            .mockup-phone-carousel { width: 240px; height: 420px; }
-        }
-    </style>
+/* ⭐ CARROUSEL */
+.mockup-phone-carousel { position: relative; width: 160px; height: 300px; overflow: hidden; border-radius: 18px; }
+.mockup-phone-carousel img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1s; }
+.mockup-phone-carousel img.active { opacity: 1; }
+</style>
 </head>
-
 <body>
 
-<img src="img/logo10.png" class="marca-agua" alt="MenuClick">
+    <img src="img/logo10.jpg" class="marca-agua" alt="Marca de Agua MenuClick">
 
-<div class="hero">
-    <img src="img/logo10.png" class="hero-logo" alt="MenuClick">
-    <h1>Tu Carta Está Haciendo Perder Ventas.<br>Esta Está Diseñada para Aumentarlas.</h1>
-    <p>
-        No es diseño por estética.<br>
-        Es una carta digital pensada para que el cliente entienda rápido,
-        pida más y elija mejor.
-    </p>
-    <a href="https://wa.me/5491123140119" class="btn-principal">Ver Cómo Funciona en Mi Restaurante</a>
-</div>
+    <div class="hero">
+        <img src="img/logo10.jpg" class="hero-logo" alt="MenuClick Logo">
+        <h1>Carta Digital Profesional<br>Que Vende a Primera Vista</h1>
+        <p>Elegante, rápida y pensada para que tus clientes elijan más fácil.</p>
+        <a href="https://wa.me/5491123140119" class="btn-principal">Quiero mi Demo Gratis</a>
+    </div>
 
-<div class="section">
-    <h2 style="color:#0b2e63">Hablamos tu Idioma (y el de tus Clientes)</h2>
+    <div class="section" style="margin-top:60px;">
+        <h2 style="color:#0b2e63;">Hablamos tu Idioma (y el de tus Clientes)</h2>
 
-    <div class="benefits-box colored-benefit">
-        <div class="benefits-text">
-            <p>🚫 <strong>PDF pesados:</strong> no cargan y hacen esperar.</p>
-            <p>🚫 <strong>Turistas:</strong> no entienden el menú.</p>
-            <p>🚫 <strong>Clientes indecisos:</strong> frenan el servicio.</p>
-            <p>📸 El cliente ve claro y decide sin preguntar.</p>
-            <p>🌎 Traducción automática.</p>
-            <p>⚡ Carga inmediata.</p>
-            <p>💸 Más pedidos, más ventas.</p>
-            <p><strong>🔗 Un solo link</strong> para Instagram, Google y WhatsApp.</p>
+        <div class="benefits-box colored-benefit">
+            <div class="benefits-text">
+                <p><strong>🚫 QR lentos y PDF pesados:</strong> frustran al cliente y hacen que parezca que tu servicio demora más.</p>
+                <p><strong>🚫 Turistas perdidos:</strong> no entienden el menú, preguntan demasiado y terminan pidiendo lo más barato.</p>
+                <br>
+                <p><strong>🔥 Con MenuClick todo cambia:</strong></p>
+                <p>📸 Fotos grandes y claras que hacen que el cliente quiera pedir más.</p>
+                <p>🌎 Traducción automática: el turista entiende todo sin preguntar.</p>
+                <p>⚡ Carga ultra rápida que mejora tu imagen y acelera la rotación de mesas.</p>
+                <p>💸 Tus ventas suben porque el cliente ve, entiende y desea cada plato.</p>
 
-            <a href="https://tilo-restocafe.github.io/cartaaguero/" class="btn-ver-carta">Ver Carta en Vivo</a>
-        </div>
-
-        <div class="mockup-phone">
-            <div class="mockup-phone-carousel" id="phone-carousel">
-                <img src="img/mockup-tilo.jpg" class="active">
-                <img src="img/modo dos.png">
-                <img src="img/menuclicklogo.png">
+                <a href="https://cholose10.github.io/cartaaguero/" class="btn-ver-carta">Ver Carta en Vivo</a>
             </div>
+
+            <div class="mockup-phone">
+                <img src="img/mockp1.jpg" alt="Mockup Tilo en Celular">
+            </div>
+        </div></div>
+
+    <!-- ⭐ BENEFICIOS DESTACADOS -->
+    <div class="section" style="margin-top:60px;">
+        <h2 style="color:#0b2e63; text-align:center; margin-bottom:30px;">Beneficios que Hacen que Tu Negocio Venda Más</h2>
+
+        <div class="benefits-box colored-benefit" style="flex-direction:column; text-align:center;">
+            <p style="font-size:1.2rem;">📈 <strong>Aumentá tus ventas</strong> mostrando tus platos de forma irresistible.</p>
+            <p style="font-size:1.2rem;">⚡ <strong>Reducí preguntas</strong> con fotos claras y traducción automática.</p>
+            <p style="font-size:1.2rem;">🥇 <strong>Mejorá la imagen de tu local</strong> con una carta moderna y rápida.</p>
+            <p style="font-size:1.2rem;">🧾 <strong>Editá precios en segundos</strong> sin tocar el código.</p>
+            <p style="font-size:1.2rem;">📱 <strong>Se ve perfecto</strong> en cualquier celular, tablet o PC.</p>
         </div>
     </div>
-</div>
 
-<div class="section" style="text-align:center;">
-    <h2 style="color:#0b2e63;">Hacé que tu Carta Empiece a Vender por Vos</h2>
-
-    <p style="font-size:1.2rem; max-width:650px; margin:20px auto;">
-        Incluso cuando el local está lleno, MenuClick ayuda a que el cliente
-        entienda rápido, elija mejor y pida más.
-    </p>
-
-    <a href="https://wa.me/5491123140119" class="btn-principal">
-        Quiero mi Carta MenuClick
-    </a>
-
-    <p style="margin-top:12px; font-size:.95rem; opacity:.7;">
-        Demo real · Sin compromiso · Respuesta por WhatsApp
-    </p>
-</div>
-
-<div class="section">
-    <div class="emotional">
+    <div class="section emotional">
         <p>
-        “Tu carta no es una lista de precios.  
-        Es lo que hace que el cliente diga:  
-        <strong>Hoy acá quiero comer.</strong>”
+            “Tu carta no es una lista de precios. Es tu primera impresión.
+            Es lo que hace que el cliente diga: ‘acá quiero comer’.”
         </p>
     </div>
+
+    
+    <!-- ⭐ POR QUÉ TODOS ESTÁN CAMBIANDO A MENucLICK -->
+    <div class="section" style="text-align:center;">
+        <h2 style="color:#0b2e63;">¿Por qué todos están cambiando a MenuClick?</h2>
+        <p style="font-size:1.1rem; margin-top:10px;">
+            Porque no es solo una carta digital. Es una herramienta que vende, convence y enamora.
+        </p>
+
+        <div class="benefits-box colored-benefit" style="margin-top:30px; flex-direction:column; text-align:center;">
+            <p>🚀 <strong>Más ventas</strong> gracias a fotos irresistibles.</p>
+            <p>🌎 <strong>Ideal para turistas</strong> con traducción automática.</p>
+            <p>🕒 <strong>Menos tiempo explicando</strong> y más tiempo atendiendo.</p>
+            <p>💼 <strong>Imagen profesional</strong> que eleva tu marca.</p>
+        </div>
+    </div>
+
+    <!-- ⭐ TABLA COMPARATIVA -->
+    <div class="section" style="text-align:center;">
+        <h2 style="color:#0b2e63;">Comparación Real</h2>
+        <table style="width:100%; border-collapse:collapse; margin-top:25px;">
+            <tr style="background:#0b2e63; color:white;">
+                <th style="padding:12px;">Característica</th>
+                <th style="padding:12px;">PDF</th>
+                <th style="padding:12px;">QR Común</th>
+                <th style="padding:12px;">MenuClick</th>
+            </tr>
+            <tr>
+                <td style="padding:10px;">Carga Rápida</td>
+                <td>❌</td>
+                <td>⚠️</td>
+                <td>✅</td>
+            </tr>
+            <tr style="background:#f2f2f2;">
+                <td style="padding:10px;">Fotos Grandes</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+            </tr>
+            <tr>
+                <td style="padding:10px;">Traducción Automática</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+            </tr>
+            <tr style="background:#f2f2f2;">
+                <td style="padding:10px;">Edición Fácil</td>
+                <td>❌</td>
+                <td>⚠️</td>
+                <td>✅</td>
+            </tr>
+            <tr>
+                <td style="padding:10px;">Aumenta Ventas</td>
+                <td>❌</td>
+                <td>⚠️</td>
+                <td>✅</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- ⭐ QUÉ OFRECEMOS -->
+    <div class="section" id="ofrecemos">
+        <h2 style="color:#0b2e63; text-align:center;">¿Qué Ofrecemos?</h2>
+
+        <div class="benefits-box colored-benefit" style="margin-top:40px;">
+            <div class="benefits-text">
+                <p><strong>📌 QR Profesional con tu Marca:</strong><br>
+                Creamos un QR único con tu logo, listo para imprimir y colocar en mesas, barras o vidrieras. Elegante, rápido y diseñado para que te recuerden.</p>
+
+                <p><strong>📱 Link Inteligente:</strong><br>
+                Un enlace que muestra teléfonos, redes sociales, ubicación y WhatsApp. Todo lo que tu cliente necesita en un solo clic.</p>
+
+                <p><strong>🍽️ Carta Digital Premium:</strong><br>
+                Fotos, descripciones, precios y traducción automática. Tu menú luce moderno y vende más.</p>
+
+                <p><strong>🛠️ Panel Admin Completo:</strong><br>
+                Cambiá precios al instante. Agregá o eliminá productos y modificá descripciones sin tocar código.</p>
+            </div>
+
+            <div class="benefits-mockup" style="padding:15px; background:#111; border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.3); display:flex; justify-content:center;">
+    <div class="mockup-phone-carousel">
+        <img src="img/mockp2.1.jpg" class="active" alt="Mockup 1">
+        <img src="img/mok2.jpg" alt="Mockup 2">
+        <img src="img/mockup2.3.jpg" alt="Mockup 3">
+    </div>
+</div>
+</div>
 </div>
 
 <script>
-    // Script para el carrusel automático
-    const images = document.querySelectorAll('#phone-carousel img');
-    let currentIndex = 0;
-
-    function nextImage() {
-        images[currentIndex].classList.remove('active');
-        currentIndex = (currentIndex + 1) % images.length;
-        images[currentIndex].classList.add('active');
-    }
-
-    // Cambia cada 3 segundos
-    setInterval(nextImage, 3000);
+let index = 0;
+const imgs = document.querySelectorAll('.mockup-phone-carousel img');
+setInterval(()=>{
+    imgs[index].classList.remove('active');
+    index = (index + 1) % imgs.length;
+    imgs[index].classList.add('active');
+}, 3000);
 </script>
-
 </body>
 </html>
