@@ -12,19 +12,20 @@
       --dorado: #c19f78;
     }
 
-    body {
- .container {
+  body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+  line-height: 1.6;
+}
+
+.container {
   width: 100%;
   max-width: 1100px;
   margin: auto;
   padding: 0 15px;
 }
-      margin: 0;
-      font-family: 'Roboto', sans-serif;
-      color: #333;
-      background-color: #f9f9f9;
-      line-height: 1.6;
-    }
 
     /* --- BARRA SUPERIOR --- */
     header {
@@ -269,9 +270,7 @@
       50% { transform: translateY(-8px); }
     }
 
-    @media (max-width: 768px) {
-      .hero {
-     @media (max-width: 768px) {
+@media (max-width: 768px) {
 
   .hero {
     flex-direction: column;
@@ -304,16 +303,7 @@
     padding: 40px 15px;
   }
 
-}   flex-direction: column;
-      }
-
-      .hero-content {
-        text-align: center;
-      }
-
-      .hero-content h1 {
-        font-size: 1.8rem;
-      }
+}
       /* ANIMACION SCROLL */
 .reveal{
   opacity:0;
@@ -327,10 +317,10 @@
 }
     }
     /* MOCKUP PHONE */
-.mockup-phone{
-  max-width:320px;
-  margin:40px auto;
-  position:relative;
+.mockup-phone {
+  max-width: 320px;
+  margin: 40px auto;
+  position: relative;
 }
 
 .mockup-phone-carousel {
@@ -343,44 +333,17 @@
   border: 5px solid #222;
 }
 
-.mockup-phone-carousel img{
-  position:absolute;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  opacity:0;
-  transition:opacity 0.8s ease;
-}
-
-.mockup-phone-carousel img.active{
-  opacity:1;
-}/* MOCKUP PHONE */
-.mockup-phone{
-  max-width:320px;
-  margin:40px auto;
-  position:relative;
-}
-
-.mockup-phone-carousel {
-  position: relative;
+.mockup-phone-carousel img {
+  position: absolute;
   width: 100%;
-  height: 500px;
-  max-height: 70vh;
-  overflow: hidden;
-  border-radius: 25px;
-  border: 5px solid #222;
-}
-.mockup-phone-carousel img{
-  position:absolute;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  opacity:0;
-  transition:opacity .8s ease;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity .8s ease;
 }
 
-.mockup-phone-carousel img.active{
-  opacity:1;
+.mockup-phone-carousel img.active {
+  opacity: 1;
 }
 
 /* SECCION EMOCIONAL */
@@ -491,14 +454,16 @@
             <a href="https://tilo-restocafe.github.io/cartaaguero/" class="btn-principal">Ver Carta en Vivo</a>
         </div>
 
-        <div class="mockup-phone">
-            <div class="mockup-phone-carousel">
-                <img src="img/mockup-tilo.jpg" class="active">
-                <img src="img/modo dos.png">
-                <img src="img/menuclicklogo.png">
-            </div>
-        </div>
+  <div class="section reveal">
+  <h2>...</h2>
+  <a class="btn-principal">...</a>
+
+  <div class="mockup-phone">
+    <div class="mockup-phone-carousel">
+      <img ...>
+      <img ...>
     </div>
+  </div>
 </div>
 
 <div class="section emotional">
