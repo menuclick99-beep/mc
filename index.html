@@ -244,7 +244,102 @@
     .whatsapp-float:hover {
       transform: scale(1.1);
     }
+/* ===== MEJORAS MOBILE Y PC ===== */
 
+@media (max-width: 768px) {
+
+  body {
+    font-size: 15px;
+  }
+
+  .nav {
+    padding: 10px 15px;
+  }
+
+  .nav img {
+    height: 35px;
+  }
+
+  .nav a {
+    margin-left: 10px;
+    font-size: 14px;
+  }
+
+  .hero {
+    padding: 50px 15px;
+    gap: 20px;
+  }
+
+  .hero img {
+    max-width: 180px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .btn-principal, .btn-demo {
+    width: 100%;
+    max-width: 300px;
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .section {
+    padding: 40px 15px;
+  }
+
+  .section h2 {
+    font-size: 1.5rem;
+  }
+
+  .benefit-card {
+    width: 100%;
+  }
+
+  .mockup-phone {
+    max-width: 260px;
+  }
+
+  .mockup-phone-carousel {
+    height: 500px;
+  }
+
+  .porque ul {
+    font-size: 1rem;
+  }
+
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    font-size: 1.6rem;
+  }
+}
+
+/* ===== MEJORAS PARA PC GRANDES ===== */
+
+@media (min-width: 1200px) {
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .section h2 {
+    font-size: 2.2rem;
+  }
+
+  .benefit-card {
+    width: 320px;
+  }
+
+  .mockup-phone {
+    max-width: 340px;
+  }
+}
     /* --- ANIMACIONES --- */
     @keyframes fadeInLeft {
       from { opacity: 0; transform: translateX(-40px); }
