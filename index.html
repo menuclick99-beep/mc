@@ -206,6 +206,29 @@ header {
   50% { transform: scale(1.05); }
   100% { transform: scale(1); }
 }
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+      }
+
+      .hero-content {
+        text-align: center;
+      }
+
+      .hero-content h1 {
+        font-size: 1.8rem;
+      }
+      /* ANIMACION SCROLL */
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:all .8s ease;
+}
+
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
 </style>
   <header>
   <div class="nav">
