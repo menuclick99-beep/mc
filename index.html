@@ -11,23 +11,6 @@
       --marron: #663c1d;
       --dorado: #c19f78;
     }
-
-  body {
-  margin: 0;
-  font-family: 'Roboto', sans-serif;<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MenuClick - Cartas Digitales que Venden</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --azul: #004AAD;
-      --marron: #663c1d;
-      --dorado: #c19f78;
-    }
-
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
@@ -117,23 +100,23 @@
       margin-bottom: 25px;
     }
 
-    .btn-principal {
-      display: inline-block;
-      background-color: white;
-      color: var(--azul);
-      padding: 15px 30px;
-      border-radius: 8px;
-      font-weight: bold;
-      font-size: 1.1rem;
-      text-decoration: none;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      transition: all 0.3s;
-    }
+.btn-principal {
+  display: inline-block;
+  background: linear-gradient(135deg, #00c853, #00e676);
+  color: white;
+  padding: 16px 32px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  transition: all 0.3s;
+}
 
-    .btn-principal:hover {
-      background-color: #87acfb;
-      transform: scale(1.05);
-    }
+.btn-principal:hover {
+  transform: scale(1.08);
+  background: linear-gradient(135deg, #00e676, #00c853);
+}
 
     /* --- SECCIÓN IDIOMA --- */
     .section {
@@ -288,18 +271,43 @@
       50% { transform: translateY(-8px); }
     }
 
-    @media (max-width: 768px) {
-      .hero {
-        flex-direction: column;
-      }
+  @media (max-width: 768px) {
 
-      .hero-content {
-        text-align: center;
-      }
+  .nav {
+    flex-direction: column;
+    padding: 10px;
+  }
 
-      .hero-content h1 {
-        font-size: 1.8rem;
-      }
+  .nav a {
+    margin: 10px 10px 0;
+    display: inline-block;
+  }
+
+  .hero {
+    padding: 40px 15px;
+  }
+
+  .hero img {
+    max-width: 180px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .benefit-card {
+    width: 100%;
+  }
+
+  .mockup-phone-carousel {
+    height: 500px;
+  }
+
+}
       /* ANIMACION SCROLL */
 .reveal{
   opacity:0;
