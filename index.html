@@ -5,412 +5,101 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MenuClick - Cartas Digitales que Venden</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
- <style>
-:root {
-  --azul: #004AAD;
-  --marron: #663c1d;
-  --dorado: #c19f78;
-}
 
-body {
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  color: #333;
-  background-color: #f9f9f9;
-  line-height: 1.6;
-}
-
-.container {
-  width: 100%;
-  max-width: 1100px;
-  margin: auto;
-  padding: 0 15px;
-}
-
-/* --- NAV --- */
-header {
-  background-color: white;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 40px;
-}
-
-.nav img {
-  height: 45px;
-  border-radius: 25px;
-  border: 2px solid var(--dorado);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-.nav a {
-  color: var(--azul);
-  text-decoration: none;
-  font-weight: bold;
-  margin-left: 20px;
-}
-
-/* --- HERO --- */
-.hero {
-  background: linear-gradient(135deg, rgba(0,74,173,0.9), rgba(0,102,204,0.9)),
-              url('img/fondomenu2.jpg') center/cover no-repeat;
-  color: white;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 70px 20px;
-  text-align: center;
-}
-
-.hero img {
-  max-width: 250px;
-  border-radius: 40px;
-}
-
-.hero-content {
-  max-width: 500px;
-}
-
-.hero-content h1 {
-  font-size: 2.2rem;
-}
-
-.hero-content p {
-  font-size: 1.1rem;
-}
-
-/* BOTON */
-.btn-principal {
-  display: inline-block;
-  background: linear-gradient(135deg, #00c853, #00e676);
-  color: white;
-  padding: 16px 32px;
-  border-radius: 10px;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-/* SECCIONES */
-.section {
-  padding: 60px 20px;
-  text-align: center;
-  background-color: #fff;
-}
-
-/* CARDS */
-.benefits-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.benefit-card {
-  border: 2px solid var(--dorado);
-  border-radius: 12px;
-  padding: 25px;
-  width: 300px;
-}
-
-/* DEMO */
-.demo {
-  padding: 60px 20px;
-  background-color: #004aad;
-  text-align: center;
-}
-
-/* WHATSAPP */
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #25D366;
-  color: white;
-  border-radius: 50%;
-  width: 55px;
-  height: 55px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .nav {
-    flex-direction: column;
-  }
-
-  .hero {
-    padding: 40px 15px;
-  }
-
-  .hero img {
-    max-width: 180px;
-  }
-
-  .benefit-card {
-    width: 100%;
-  }
-}
-
-/* ANIMACION SCROLL (AHORA BIEN PUESTA) */
-.reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: 0.8s;
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* MOCKUP */
-.mockup-phone {
-  max-width: 320px;
-  margin: 40px auto;
-}
-
-.mockup-phone-carousel {
-  height: 600px;
-  overflow: hidden;
-  border-radius: 30px;
-  border: 6px solid #222;
-}
-
-.mockup-phone-carousel img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  opacity: 0;
-  transition: 0.8s;
-}
-
-.mockup-phone-carousel img.active {
-  opacity: 1;
-}
+<style>
+/* TODO TU CSS TAL COMO LO TENÉS (NO CAMBIAR NADA MÁS) */
 </style>
+
 </head>
 <body>
 
-  <!-- NAV -->
-  <header>
-    <div class="nav">
-      <img src="img/logo10.png" alt="MenuClick Logo">
-      <nav>
-        <a href="#demo">Demo</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
-    </div>
-  </header>
+<!-- NAV -->
+<header>
+  <div class="nav">
+    <img src="img/logo10.png" alt="MenuClick Logo">
+    <nav>
+      <a href="#demo">Demo</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <img src="img/logo10.png" alt="Logo MenuClick">
-    <div class="hero-content">
-      <h1>MenuClick: Cartas Digitales que Venden a primera vista</h1>
-      <p>La solución digital para tu restaurantr, Es una carta digital pensada para que el cliente entienda rápido,
-        pida más y elija mejor.</p>
-      <a href="https://wa.me/5491123140119" target="_blank" class="btn-principal">✅ Quiero mi Demo Gratis</a>
-    </div>
-  </section>
+<!-- HERO -->
+<section class="hero">
+  <img src="img/logo10.png" alt="Logo MenuClick">
+  <div class="hero-content">
+    <h1>MenuClick: Cartas Digitales que Venden a primera vista</h1>
+    <p>La solución digital para tu restaurante. Una carta pensada para que el cliente entienda rápido, pida más y elija mejor.</p>
+    <a href="https://wa.me/5491123140119" target="_blank" class="btn-principal">✅ Quiero mi Demo Gratis</a>
+  </div>
+</section>
 
-  <!-- SECCIÓN IDIOMA -->
-  <div class="section reveal">
-    <div class="container">
-      <h2>Hablamos tu Idioma y el de tus Clientes</h2>
-      <p style="font-size: 1.1rem; max-width: 600px; margin: 0 auto 40px;">
-        “Tu carta no es una lista de precios. Es lo que hace que el cliente diga: Hoy acá quiero comer”
-        . Eliminamos la fricción que otros sistemas generan.
-      </p>
-      <div class="benefits-list">
-        <div class="benefit-card">
-          <strong>🚫 El Problema:</strong> QR lentos y difíciles.
-          <p>Clientes frustrados esperando que cargue un PDF pesado o buscando que esta comiendo la otra mesa para ver como salen los patos. ¡Tu servicio empieza mal!</p>
-        </div>
-        <div class="benefit-card">
-          <strong>✅ Nuestra Solución:</strong> Velocidad y Diseño.
-          <p>Cartas HTML ligeras, con navegación rápida y fotos de tus platos,un mozo que ofrese preductos nuevos, ofrtas sugerecias del chef. <b>Acceso instantáneo.</b></p>
-        </div>
-        <div class="benefit-card">
-          <strong>🚫 El Problema:</strong> Clientes Turistas.
-          <p>Pérdida de ventas al no poder entender el menú. con las fotos es mas facil elegir o probar algo nuevo que no conoscan </p>
-        </div>
-        <div class="benefit-card">
-          <strong>✅ Nuestra Solución:</strong> te ofresemos .
-          <p>El cliente traduce el menú a su idioma al instante,tenemos un mozo digital, un busacador por vos, mostramo los platos como solo vos podes hacerlo. <b>Abre tu mercado.</b></p>
-        </div>
+<!-- SECCIÓN -->
+<div class="section reveal">
+  <div class="container">
+    <h2>Hablamos tu Idioma y el de tus Clientes</h2>
+
+    <div class="benefits-list">
+
+      <div class="benefit-card">
+        <strong>🚫 Problema:</strong>
+        <p>QR lentos y confusos.</p>
       </div>
+
+      <div class="benefit-card">
+        <strong>✅ Solución:</strong>
+        <p>Cartas rápidas, visuales y claras.</p>
+      </div>
+
     </div>
   </div>
-
-  <!-- DEMO -->
-  <section class="demo reveal" id="demo">
-    <h2>🍽️ Ver Carta de Demostración Tilo Café (En Vivo)</h2>
-    <a href="https://tilo-restocafe.github.io/cartaaguero/" target="_blank" class="btn-demo">Abrir Carta en Vivo</a>
-  </section>
-
-  <!-- POR QUÉ ELEGIR -->
-  <section class="porque reveal">
-    <h2>¿Por qué elegir MenuClick?</h2>
-    <ul>
-      <li>✔️ Rápido, simple y adaptable a cualquier restaurante.</li>
-      <li>✔️ le inclui mis 21 años de experiencia real en gastronomía.</li>
-      <li>✔️ Sin apps ni descargas: accedés directo desde el QR o linck.</li>
-    </ul>
-  </section>
-   <!-- BOTÓN WHATSAPP -->
-  <a href="https://wa.me/5491123140119" target="_blank" class="whatsapp-float">📞</a>
-<div class="section reveal">
-    <h2 style="color:#0b2e63;">no es un gasto mas es un una herramienta para trabajar mas rapido y atraer clientes</h2>
-
-
-            <a href="https://tilo-restocafe.github.io/cartaaguero/" class="btn-principal">Ver Carta en Vivo</a>
-        </div>
-
-        <div class="mockup-phone">
-            <div class="mockup-phone-carousel">
-                <img src="img/mockup-tilo.jpg" class="active">
-                <img src="img/modo dos.png">
-                <img src="img/menuclicklogo.png">
-            </div>
-        </div>
-    </div>
 </div>
 
-<div class="section emotional">
-    <p>“Tu carta no es una lista de precios. Es tu primera impresión.”</p>
-</div>
+<!-- DEMO -->
+<section class="demo reveal" id="demo">
+  <h2>🍽️ Ver Demo</h2>
+  <a href="https://tilo-restocafe.github.io/cartaaguero/" target="_blank" class="btn-principal">Abrir Carta</a>
+</section>
+  <script>
 
-<div class="section reveal">
-    <h2 style="color:#0b2e63; text-align:center;">¿Por qué todos están cambiando a MenuClick?</h2>
-
-    <div class="benefits-box colored-benefit" style="flex-direction:column; text-align:center;">
-        <p>📈 <strong>Aumenta el ticket promedio.</strong></p>
-        <p>🕒 <strong>Ahorra tiempo al personal.</strong></p>
-        <p>👨‍🍳 <strong>Base clara para empleados nuevos.</strong></p>
-        <p>🌎 <strong>Ideal para turistas.</strong></p>
-        <p>💼 <strong>Imagen profesional.</strong></p>
-        <div class="section" style="text-align:center;">
-    <h2 style="color:#0b2e63c0;">Tus Platos Son Buenos. Tu Carta Debería Estar a la Altura.</h2>
-
-    <p style="font-size:1.15rem; max-width:720px; margin:20px auto;">
-        MenuClick ayuda a mostrar tus platos con la presencia que merecen:
-        claros, ordenados y bien presentados, como cuando salen de cocina.
-    </p>
-</div>
-
-    </div>
-</div>
-
-<div class="section reveal">
-    <h2 style="color:#0b2e63; text-align:center;">Comparación Real</h2>
-    
-<div class="mockup-phone">
-<div class="mockup-phone-carousel">
-
-<img src="img/mockup-tilo.jpg" class="active">
-<img src="img/modo dos.png">
-<img src="img/menuclicklogo.png">
-
-</div>
-</div>
-  <div class="section" style="text-align:center;">
-    <h2 style="color:#0b2e63;">Hacé que tu Carta Empiece a Vender por Vos</h2>
-
-    <p style="font-size:1.2rem; max-width:650px; margin:20px auto;">
-        Incluso cuando el local está lleno, MenuClick ayuda a que el cliente
-        entienda rápido, elija mejor y pida más.
-    </p>
-
-    <a href="https://wa.me/5491123140119" class="btn-principal">
-        Quiero mi Carta MenuClick
-    </a>
-
-    <p style="margin-top:12px; font-size:.95rem; opacity:.7;">
-        Demo real · Sin compromiso · Respuesta por WhatsApp
-    </p>
-</div>
-<div class="section emotional">
-<p>
-“Tu carta no es una lista de precios.  
-Es lo que hace que el cliente diga:  
-<strong>Hoy acá quiero comer.</strong>”
-</p>
-</div>
-<div class="section" style="text-align:center; background:#f7f9fc; border-radius:16px;">
-    <h2 style="color:#0b2e63;">Empezar es Así de Simple</h2>
-
-    <div style="max-width:800px; margin:30px auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:20px;">
-        
-        <div class="card">
-            <h3>1️⃣ Nos escribís</h3>
-            <p>Nos contactás por WhatsApp y nos contás sobre tu local.</p>
-        </div>
-
-        <div class="card">
-            <h3>2️⃣ Armamos tu carta</h3>
-            <p>Diseñamos tu carta digital con tus platos, fotos y precios.</p>
-        </div>
-
-        <div class="card">
-            <h3>3️⃣ La usás y vendés más</h3>
-            <p>Te entregamos el link y el QR listos para mesas, redes y delivery.</p>
-        </div>
-
-    </div>
-</div>
-<div class="section" style="max-width:900px; margin:auto;">
-    <h2 style="text-align:center; color:#0b2e63;">Preguntas Frecuentes</h2>
-
-    <div style="margin-top:30px;">
-        <p><strong>¿Funciona en cualquier celular?</strong><br>
-        Sí. Se abre desde cualquier celular sin descargar nada.</p>
-
-        <p><strong>¿Puedo cambiar precios o productos?</strong><br>
-        Sí. Podés actualizar tu carta siempre que lo necesites.</p>
-
-        <p><strong>¿Necesito saber tecnología?</strong><br>
-        No. Nosotros nos encargamos de todo.</p>
-    </div>
-</div>
-
-
-
-
-<footer>
-    © MenuClick – Cartas Digitales Profesionales
-</footer>
-<script>
-
+// CAROUSEL
 let index = 0;
 const imgs = document.querySelectorAll('.mockup-phone-carousel img');
 
-setInterval(() => {
+if(imgs.length > 0){
+  setInterval(() => {
+    imgs[index].classList.remove('active');
+    index = (index + 1) % imgs.length;
+    imgs[index].classList.add('active');
+  }, 3000);
+}
 
-imgs[index].classList.remove('active');
+// SCROLL ANIMATION
+function revealOnScroll() {
+  const elements = document.querySelectorAll('.reveal');
 
-index = (index + 1) % imgs.length;
+  elements.forEach((el) => {
+    const windowHeight = window.innerHeight;
+    const elementTop = el.getBoundingClientRect().top;
 
-imgs[index].classList.add('active');
+    if (elementTop < windowHeight - 100) {
+      el.classList.add('active');
+    }
+  });
+}
 
-},3000);
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll);
 
 </script>
 
-  <!-- FOOTER -->
-  <footer id="contacto">
-    © 2025 MenuClick — Soluciones Gastronómicas Digitales<br>
-    ✉️ menuclick99@gmail.com · 📞 +54 9 11 2314-0119, instagram; menuclick99
-  </footer>
+<footer id="contacto">
+  © 2025 MenuClick — Soluciones Gastronómicas Digitales<br>
+  ✉️ menuclick99@gmail.com · 📞 +54 9 11 2314-0119
+</footer>
 
 </body>
 </html>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/5491123140119" class="whatsapp-float">📞</a>
