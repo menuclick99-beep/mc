@@ -40,8 +40,8 @@ header {
 .nav img {
   height: 45px;
   border-radius: 20px;
+  animation: logoGlow 3s ease-in-out infinite alternate;
 }
-
 .nav a {
   text-decoration: none;
   color: var(--azul);
@@ -51,27 +51,36 @@ header {
 
 /* HERO */
 .hero {
-  background: linear-gradient(rgba(0,74,173,0.9), rgba(0,74,173,0.9)),
-              url('img/fondomenu2.jpg') center/cover;
+  background: linear-gradient(135deg, rgba(0,74,173,0.9), rgba(0,102,204,0.9)),
+              url('img/fondomenu2.jpg') center/cover no-repeat;
   color: white;
   text-align: center;
   padding: 60px 20px;
+  animation: fondoGlow 6s ease-in-out infinite;
 }
-
 .hero img {
   width: 180px;
   border-radius: 30px;
   margin-bottom: 20px;
+  animation: fadeLeft 1s ease-out;
 }
 
+.hero h1 {
+  animation: fadeUp 1s ease-out;
+}
+
+.hero p {
+  animation: fadeUp 1.5s ease-out;
+}
 .btn-principal {
-  background: #00c853;
+  background: linear-gradient(135deg, #00c853, #00e676);
   color: white;
   padding: 15px 25px;
   border-radius: 8px;
   text-decoration: none;
   display: inline-block;
   margin-top: 15px;
+  animation: pulse 2s infinite;
 }
 
 /* SECCIONES */
@@ -149,6 +158,43 @@ header {
   .benefit-card{
     width:100%;
   }
+}
+  @keyframes fondoGlow {
+  0% { filter: brightness(1); }
+  50% { filter: brightness(1.2); }
+  100% { filter: brightness(1); }
+}
+ @keyframes logoGlow {
+  from {
+    filter: drop-shadow(0 0 0px rgba(193,159,120,0));
+  }
+  to {
+    filter: drop-shadow(0 0 12px rgba(193,159,120,0.9));
+  }
+   @keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
 }
 </style>
   <header>
