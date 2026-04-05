@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --azul: #004AAD;
+      --azul: #07f342d8;
       --marron: #663c1d;
       --dorado: #c19f78;
     }
@@ -65,7 +65,7 @@
 
     /* --- HERO (PARTE PRINCIPAL) --- */
     .hero {
-      background: linear-gradient(135deg, rgba(0,74,173,0.95), rgba(10, 46, 99, 0.9)),
+      background: linear-gradient(135deg, rgba(35, 126, 245, 0.95), rgba(10, 46, 99, 0.9)),
                   url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1000') center/cover;
       color: white;
       padding: 80px 20px;
@@ -156,6 +156,137 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.3);
       z-index: 1000;
     }
+    /* Contenedor principal azul */
+.section-blue-container {
+    background-color: #0443f1; /* El azul de fondo de tu imagen */
+    padding: 60px 20px;
+    border-radius: 20px;
+    margin: 40px auto;
+    max-width: 1100px;
+}
+
+.title-white {
+    color: rgb(172, 170, 170) !important;
+    text-align: left;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+}
+
+.content-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Flexbox para poner texto y celular lado a lado */
+.benefits-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+}
+
+.benefits-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Estilo de cada renglón/tarjeta */
+.card-item {
+    padding: 12px 20px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.red-light { background-color: #f8d7da; border: 1px solid #f5c6cb; }
+.green-light { background-color: #d4edda; border: 1px solid #c3e6cb; }
+.blue-light { background-color: #e7f0fd; border: 1px solid #cfe2ff; }
+.no-shadow { box-shadow: none; }
+/* Estilo específico para el carrusel dentro del marco del teléfono */
+.mockup-phone-carousel {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Ajusta según el tamaño de tus imágenes */
+    background: #000;
+}
+
+.mockup-phone-carousel img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.mockup-phone-carousel img.active {
+    opacity: 1;
+}
+
+/* Reutilizamos las clases de colores de la sección anterior */
+.red-light { background-color: #f8d7da; border: 1px solid #f5c6cb; color: #721c24; }
+.blue-light { background-color: #e7f0fd; border: 1px solid #cfe2ff; color: #084298; }
+.green-light { background-color: #d4edda; border: 1px solid #c3e6cb; color: #155724; }
+
+/* Botón Ver Carta */
+.btn-ver-vivo {
+    display: inline-block;
+    background-color: #ac0909;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.btn-ver-vivo:hover {
+    background-color: #004bad8e;
+    transform: scale(1.05);
+}
+
+/* Mockup del celular */
+.mockup-side {
+    flex: 0 0 320px;
+    display: flex;
+    justify-content: center;
+}
+
+.phone-frame {
+    width: 280px;
+    border: 10px solid #353535;
+    border-radius: 35px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    background: #000;
+}
+
+.phone-frame img {
+    width: 100%;
+    display: block;
+}
+
+
+/* Ajuste para móviles */
+@media (max-width: 768px) {
+    .benefits-box {
+        flex-direction: column;
+    }
+    .mockup-side {
+        order: 2; /* Celular abajo en móvil */
+        width: 100%;
+    }
+    .benefits-text {
+        order: 1;
+    }
+    .title-white {
+        text-align: center;
+    }
+}
 
     /* RESPONSIVE */
     @media (min-width: 768px) {
@@ -206,13 +337,139 @@
     <p>Únete a los restaurantes que ya están aumentando su ticket promedio.</p>
     <a href="https://wa.me/5491123140119" style="color: var(--dorado); font-weight: bold; text-decoration: none; font-size: 1.5rem;">Escríbenos por WhatsApp</a>
   </section>
+   <section class="section-blue-container">
+    <div class="content-wrapper">
+        <h2 class="title-white">Hablamos tu Idioma (y el de tus Clientes)</h2>
+        
+        <div class="benefits-box">
+            <div class="benefits-text">
+                <div class="card-item red-light">
+                    <p><strong>🚫 QR lentos y PDF pesados:</strong> frustran al cliente y hacen que parezca que tu servicio demora más.</p>
+                </div>
+                
+                <div class="card-item red-light">
+                    <p><strong>🚫 Turistas perdidos:</strong> no entienden el menú, preguntan demasiado y terminan pidiendo lo más barato.</p>
+                </div>
 
+                <div class="card-item green-light no-shadow">
+                    <p><strong>🔥 Con MenuClick todo cambia:</strong></p>
+                </div>
+
+                <div class="card-item green-light">
+                    <p>📸 Fotos grandes y claras que hacen que el cliente quiera pedir más.</p>
+                </div>
+
+                <div class="card-item blue-light">
+                    <p>🌎 Traducción automática: el turista entiende todo sin preguntar.</p>
+                </div>
+
+                <div class="card-item blue-light">
+                    <p>⚡ Carga ultra rápida que mejora tu imagen y acelera la rotación de mesas.</p>
+                </div>
+
+                <div class="card-item blue-light">
+                    <p>💸 Tus ventas suben porque el cliente ve, entiende y desea cada plato.</p>
+                </div>
+
+                <a href="https://cholose10.github.io/cartaaguero/" target="_blank" class="btn-ver-vivo">Ver Carta en Vivo</a>
+            </div>
+
+            <div class="mockup-side">
+                <div class="phone-frame">
+                    <img src="img/mockp1.jpg" alt="Mockup Tilo en Celular">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="section-emotional-green">
+    <p>
+        “Tu carta no es una lista de precios. Es tu primera impresión. <br>
+        Es lo que hace que el cliente diga: <strong>‘acá quiero comer’.</strong>”
+    </p>
+</div>
+
+<section class="section-blue-container">
+    <div class="content-wrapper" style="text-align: center;">
+        <h2 class="title-white">¿Por qué todos están cambiando a MenuClick?</h2>
+        <p class="subtitle-white">
+            Porque no es solo una carta digital. Es una herramienta que vende, convence y enamora.
+        </p>
+
+        <div class="benefits-box" style="justify-content: center; margin-top: 30px;">
+            <div class="benefits-text" style="max-width: 800px;">
+                <div class="card-item green-light">
+                    <p>📈 <strong>Aumenta el ticket promedio:</strong> El cliente ve fotos reales y se le antoja pedir más.</p>
+                </div>
+                <div class="card-item blue-light">
+                    <p>🕒 <strong>Ahorra tiempo al personal:</strong> Menos preguntas, pedidos más rápidos.</p>
+                </div>
+                <div class="card-item blue-light">
+                    <p>👨‍🍳 <strong>Imagen Profesional:</strong> Tu negocio se ve moderno y a la vanguardia.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section-blue-container" id="ofrecemos">
+    <div class="content-wrapper">
+        <h2 class="title-white" style="text-align: center;">¿Qué Ofrecemos?</h2>
+        
+        <div class="benefits-box">
+            <div class="benefits-text">
+                <div class="card-item red-light">
+                    <p><strong>📌 QR Profesional con tu Marca:</strong><br>
+                    Creamos un QR único con tu logo, listo para imprimir y colocar en mesas, barras o vidrieras. Elegante, rápido y diseñado para que te recuerden.</p>
+                </div>
+                
+                <div class="card-item red-light">
+                    <p><strong>📱 Link Inteligente:</strong><br>
+                    Un enlace que muestra teléfonos, redes sociales, ubicación y WhatsApp. Todo lo que tu cliente necesita en un solo clic.</p>
+                </div>
+
+                <div class="card-item blue-light">
+                    <p><strong>🍽️ Carta Digital Premium:</strong><br>
+                    Fotos, descripciones, precios y traducción automática. Tu menú luce moderno y vende más.</p>
+                </div>
+
+                <div class="card-item green-light">
+                    <p><strong>🛠️ Panel Admin Completo:</strong><br>
+                    Cambiá precios al instante. Agregá o eliminá productos y modificá descripciones sin tocar código.</p>
+                </div>
+            </div>
+
+            <div class="mockup-side">
+                <div class="phone-frame">
+                    <div class="mockup-phone-carousel" id="carousel-ofrecemos">
+                        <img src="img/mockp2.1.jpg" class="active" alt="Mockup 1">
+                        <img src="img/mok2.jpg" alt="Mockup 2">
+                        <img src="img/mockup2.3.jpg" alt="Mockup 3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
   <a href="https://wa.me/5491123140119" class="whatsapp">📞</a>
 
   <footer style="padding: 40px 20px; text-align: center; background: #222; color: #777;">
     © 2025 MenuClick — Soluciones Gastronómicas Digitales<br>
     isaiascoronelnavarro@outlook.com
   </footer>
+<script>
+    function startCarousel(containerId) {
+        let index = 0;
+        const images = document.querySelectorAll(`#${containerId} img`);
+        
+        setInterval(() => {
+            images[index].classList.remove('active');
+            index = (index + 1) % images.length;
+            images[index].classList.add('active');
+        }, 3000); // Cambia cada 3 segundos
+    }
 
+    // Iniciar el carrusel de la sección "Ofrecemos"
+    startCarousel('carousel-ofrecemos');
+</script>
 </body>
 </html>
