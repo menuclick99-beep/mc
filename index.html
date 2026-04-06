@@ -189,6 +189,43 @@
     flex: 1;
     min-width: 300px;
 }
+/* --- ESTILO DEL MOCKUP OSCURO (COMO EL DE ABAJO) --- */
+.phone-frame-dark {
+    width: 280px; /* Ancho del teléfono */
+    height: 580px; /* Alto aproximado para que se vea estilizado */
+    background: #111; /* Color casi negro del marco */
+    border-radius: 25px; /* Esquinas redondeadas como el de abajo */
+    padding: 15px; /* Espacio interno para el marco */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4); /* Sombra intensa para dar profundidad */
+    overflow: hidden; /* Para que la imagen no se salga de las esquinas redondeadas */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.phone-frame-dark img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen llene el espacio sin deformarse */
+    border-radius: 15px; /* Un redondeado extra para la imagen dentro del marco */
+    display: block;
+}
+
+/* --- ESTILOS REUTILIZADOS (Para asegurar la consistencia) --- */
+.mockup-side {
+    flex: 0 0 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ajuste para móviles */
+@media (max-width: 768px) {
+    .phone-frame-dark {
+        width: 250px; /* Un poco más pequeño en celular */
+        height: 500px;
+    }
+}    
 
 /* Estilo de cada renglón/tarjeta */
 .card-item {
@@ -337,9 +374,9 @@
     <p>Únete a los restaurantes que ya están aumentando su ticket promedio.</p>
     <a href="https://wa.me/5491123140119" style="color: var(--dorado); font-weight: bold; text-decoration: none; font-size: 1.5rem;">Escríbenos por WhatsApp</a>
   </section>
-   <section class="section-blue-container">
+  <section class="section-blue-container">
     <div class="content-wrapper">
-        <h2 class="title-white">Hablamos tu Idioma y el de tus Clientes</h2>
+        <h2 class="title-white">Hablamos tu Idioma (y el de tus Clientes)</h2>
         
         <div class="benefits-box">
             <div class="benefits-text">
@@ -371,12 +408,11 @@
                     <p>💸 Tus ventas suben porque el cliente ve, entiende y desea cada plato.</p>
                 </div>
 
-                <a href="https://tilo-restocafe.github.io/cartaaguero/" target="_blank" class="btn-ver-vivo">Ver Carta en Vivo</a>
+                <a href="https://cholose10.github.io/cartaaguero/" target="_blank" class="btn-ver-vivo">Ver Carta en Vivo</a>
             </div>
 
             <div class="mockup-side">
-                <div class="phone-frame">
-                    <img src="img/mockp1.jpg" alt="Mockup Tilo en Celular">
+                <div class="phone-frame-dark"> <img src="img/mockp1.jpg" alt="Mockup Tilo en Celular">
                 </div>
             </div>
         </div>
