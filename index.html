@@ -521,80 +521,69 @@
     <div class="content-wrapper">
         <h2 class="title-white" style="text-align: center;">¿Qué Ofrecemos?</h2>
         
+       <section class="section-blue-container" id="ofrecemos">
+    <div class="content-wrapper">
+        <h2 class="title-white" style="text-align: center;">¿Qué Ofrecemos?</h2>
+        
         <div class="benefits-box">
             <div class="benefits-text">
                 <div class="card-item red-light">
                     <p><strong>📌 QR Profesional con tu Marca:</strong><br>
-                    Creamos un QR único con tu logo, listo para imprimir y colocar en mesas, barras o vidrieras. Elegante, rápido y diseñado para que te recuerden.</p>
+                    Creamos un QR único con tu logo, listo para imprimir en mesas o vidrieras. Elegante y rápido.</p>
                 </div>
                 
                 <div class="card-item red-light">
                     <p><strong>📱 Link Inteligente:</strong><br>
-                    Un enlace que muestra teléfonos, redes sociales, ubicación y WhatsApp. Todo lo que tu cliente necesita en un solo clic.</p>
+                    Un enlace que une tus redes, ubicación y WhatsApp en un solo clic.</p>
                 </div>
 
                 <div class="card-item blue-light">
                     <p><strong>🍽️ Carta Digital Premium:</strong><br>
-                    Fotos, descripciones, precios y traducción automática. Tu menú luce moderno y vende más.</p>
+                    Fotos reales, descripciones y traducción automática. Tu menú luce moderno.</p>
                 </div>
 
                 <div class="card-item green-light">
                     <p><strong>🛠️ Panel Admin Completo:</strong><br>
-                    Cambiá precios al instante. Agregá o eliminá productos y modificá descripciones de Ron sin tocar código.</p>
+                    Cambiá precios y sugerencias de <strong>Ron 🤖</strong> al instante sin tocar código.</p>
                 </div>
             </div>
-<div class="phone-frame-dark">
-    <video id="videoMenuClick" autoplay muted playsinline class="video-mockup">
-        <source src="img/0411(3).mp4" type="video/mp4">
-        Tu navegador no soporta videos.
-    </video>
-</div>
+
+            <div class="phone-frame-dark">
+                <video id="videoMenuClick" autoplay muted playsinline class="video-mockup">
+                    <source src="img/0411(3).mp4" type="video/mp4">
+                    Tu navegador no soporta videos.
+                </video>
+            </div>
+        </div> </div> </section>
+
+<a href="https://wa.me/5491123140119" class="whatsapp" target="_blank">📞</a>
+
+<footer style="padding: 40px 20px; text-align: center; background: #222; color: #c6c5c5;">
+    © 2026 MenuClick — Soluciones Gastronómicas Digitales<br>
+    menuclick99@gmail.com
+</footer>
 
 <script>
-    // Lista de tus videos en orden
+    const videoElement = document.getElementById('videoMenuClick');
+    
+    // Aquí pones los nombres de tus videos cortados
     const videos = [
+        "img/0411(3).mp4", 
         "img/video1.mp4", 
-        "img/video2.mp4", 
-        "img/video3.mp4"
+        "img/video2.mp4"
     ];
     
     let currentVideo = 0;
-    const videoElement = document.getElementById('videoMenuClick');
 
     videoElement.onended = function() {
         currentVideo++;
         if (currentVideo >= videos.length) {
-            currentVideo = 0; // Vuelve al primero para que sea un bucle infinito
+            currentVideo = 0; 
         }
         videoElement.src = videos[currentVideo];
         videoElement.play();
-    }
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-  <a href="https://wa.me/5491123140119" class="whatsapp">📞</a>
-
-  <footer style="padding: 40px 20px; text-align: center; background: #222; color: #c6c5c5;">
-    © 2025 MenuClick — Soluciones Gastronómicas Digitales<br>
-    menuclick99@gmail.com
-  </footer>
-<script>
-    function startCarousel(containerId) {
-        let index = 0;
-        const images = document.querySelectorAll(`#${containerId} img`);
-        
-        setInterval(() => {
-            images[index].classList.remove('active');
-            index = (index + 1) % images.length;
-            images[index].classList.add('active');
-        }, 3000); // Cambia cada 3 segundos
-    }
-
-    // Iniciar el carrusel de la sección "Ofrecemos"
-    startCarousel('carousel-ofrecemos');
+    };
 </script>
+
 </body>
 </html>
