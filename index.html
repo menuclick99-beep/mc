@@ -511,7 +511,7 @@
                     <p>🕒 <strong>Ahorra tiempo al personal:</strong> Menos preguntas, pedidos más rápidos.</p>
                 </div>
                 <div class="card-item blue-light">
-                    <p>👨‍🍳 <strong>Imagen Profesional:</strong> Tu negocio se ve moderno y a la vanguardia.</p>
+                    <p>👨‍🍳 <strong>Imagen :</strong> Tu personal nuevo ven como queres qu salgan los Platos.</p>
                 </div>
             </div>
         </div>
@@ -543,13 +543,32 @@
                     Cambiá precios al instante. Agregá o eliminá productos y modificá descripciones de Ron sin tocar código.</p>
                 </div>
             </div>
+<div class="phone-frame-dark">
+    <video id="videoMenuClick" autoplay muted playsinline class="video-mockup">
+        <source src="img/video1.mp4" type="video/mp4">
+        Tu navegador no soporta videos.
+    </video>
+</div>
 
-            <div class="mockup-side">
-                <div class="phone-frame">
-                    <div class="mockup-phone-carousel" id="carousel-ofrecemos">
-                        <img src="img/0411(3).mp4" class="active" alt="Mockup 1">
-                        <img src="img/mok2.jpg" alt="Mockup 2">
-                        <img src="img/mockup2.3.jpg" alt="Mockup 3">
+<script>
+    // Lista de tus videos en orden
+    const videos = [
+        "img/video1.mp4", 
+        "img/video2.mp4", 
+        "img/video3.mp4"
+    ];
+    
+    let currentVideo = 0;
+    const videoElement = document.getElementById('videoMenuClick');
+
+    videoElement.onended = function() {
+        currentVideo++;
+        if (currentVideo >= videos.length) {
+            currentVideo = 0; // Vuelve al primero para que sea un bucle infinito
+        }
+        videoElement.src = videos[currentVideo];
+        videoElement.play();
+    };
                     </div>
                 </div>
             </div>
