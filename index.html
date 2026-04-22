@@ -514,6 +514,28 @@
                 <div class="card-item blue-light">
                     <p>👨‍🍳 <strong>Imagen :</strong> Tu personal nuevo ven como queres qu salgan los Platos.</p>
                 </div>
+              <script>
+    const videoElement = document.getElementById('videoMenuClick');
+    
+    // Lista de tus videos cortos
+    const videos = [
+        "img/0411(3).mp4", 
+        "img/video1.mp4", 
+        "img/video2.mp4", 
+        "img/video3.mp4"
+    ];
+    
+    let currentVideo = 0;
+
+    videoElement.onended = function() {
+        currentVideo++;
+        if (currentVideo >= videos.length) {
+            currentVideo = 0; // Vuelve al primero
+        }
+        videoElement.src = videos[currentVideo];
+        videoElement.play();
+    };
+</script>
             </div>
         </div>
     </div>
