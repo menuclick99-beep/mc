@@ -7,9 +7,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --azul: #09438f;
-      --marron: #663c1d;
-      --dorado: #c19f78;
+      --azul: #0a2548;
+      --marron: #2701af;
+      --dorado: #d59f62;
     }
 
     * { box-sizing: border-box; }
@@ -440,7 +440,7 @@
   </section>
   <section class="section-blue-container">
     <div class="content-wrapper">
-        <h2 class="title-white">Hablamos tu Idioma (y el de tus Clientes)</h2>
+        <h2 class="title-white">Hablamos tu Idioma y el de tus Clientes</h2>
         
         <div class="benefits-box">
             <div class="benefits-text">
@@ -480,14 +480,13 @@
             </div>
 
           <div class="phone-frame-dark">
-    <video autoplay muted loop playsinline poster="img/mockp1.jpg" class="video-mockup">
+    <video autoplay muted loop playsinline poster="img/mockp1.jpg" class="video-mockup" id="video1">
         <source src="img/0411(3).mp4" type="video/mp4">
         Tu navegador no soporta videos.
           </video>
             </div>
             </div>
         </div>
-    </div>
 </section>
 <div class="section-emotional-green">
     <p>
@@ -512,41 +511,20 @@
                     <p>🕒 <strong>Ahorra tiempo al personal:</strong> Menos preguntas, pedidos más rápidos.</p>
                 </div>
                 <div class="card-item blue-light">
-                    <p>👨‍🍳 <strong>Imagen :</strong> Tu personal nuevo ven como queres qu salgan los Platos.</p>
+                    <p>👨‍🍳 <strong>Imagen :</strong> Tu personal nuevo ven como queres que salgan los Platos.</p>
                 </div>
-              <script>
-    const videoElement = document.getElementById('videoMenuClick');
-    
-    // Lista de tus videos cortos
-    const videos = [
-        "img/0411(3).mp4", 
-        "img/video1.mp4", 
-        "img/video2.mp4", 
-        "img/video3.mp4"
-    ];
-    
-    let currentVideo = 0;
-
-    videoElement.onended = function() {
-        currentVideo++;
-        if (currentVideo >= videos.length) {
-            currentVideo = 0; // Vuelve al primero
-        }
-        videoElement.src = videos[currentVideo];
-        videoElement.play();
-    };
-</script>
             </div>
         </div>
     </div>
 </section>
-<section class="section-blue-container" id="ofrecemos">
+
+  <section class="section-blue-container" id="ofrecemos">
     <div class="content-wrapper">
-        <h2 class="title-white" style="text-align: center;">¿Qué Ofrecemos?</h2> 
-       <div class="benefits-box">
+        <h2 class="title-white">¿Qué Ofrecemos?</h2> 
+        <div class="benefits-box">
             <div class="benefits-text">
                 <div class="card-item red-light">
-                    <p><strong>📌 QR Profesional con tu Marca:</strong><br>
+                  <p><strong>📌 QR Profesional con tu Marca:</strong><br>
                     Creamos un QR único con tu logo, listo para imprimir en mesas o vidrieras. Elegante y rápido.</p>
                 </div>
                 
@@ -564,60 +542,60 @@
                     <p><strong>🛠️ Panel Admin Completo:</strong><br>
                     Cambiá precios y sugerencias de <strong>Ron 🤖</strong> al instante sin tocar código.</p>
                 </div>
-          <section style="text-align: center; padding: 50px 20px; background-color: #fff;">
-    <h3 style="color: var(--azul); margin-bottom: 20px;">Seguinos en nuestras redes</h3>
-    
-    <div style="display: flex; justify-content: center; gap: 30px; align-items: center;">
-        <a href="https://www.instagram.com/menuclick99/" target="_blank" style="transition: 0.3s; transform: scale(1.2);">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 16 16" style="color: #E1306C;">
-                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.282.11-.705.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
-            </svg>
-        </a>
+            </div>
+            <div class="phone-frame-dark">
+                <video id="video2" autoplay muted loop playsinline class="video-mockup">
+                    <source src="img/0411(3).mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+  </section>
 
-        <a href="https://wa.me/5491123140119" target="_blank" style="transition: 0.3s; transform: scale(1.2);">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 16 16" style="color: #25D366;">
-                <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.601 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
-            </svg>
+  <section style="text-align: center; padding: 40px 20px; background: white;">
+    <h3 style="color: var(--azul);">Seguinos en nuestras redes</h3>
+    <div style="display: flex; justify-content: center; gap: 20px;">
+        <a href="https://www.instagram.com/menuclick99/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" width="40" height="40">
+        </a>
+        <a href="https://wa.me/5491123140119" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="40" height="40">
         </a>
     </div>
-</section>
+  </section>
 
-<footer style="padding: 40px 20px; text-align: center; background: #222; color: #c6c5c5;">
+  <footer style="padding: 30px; text-align: center; background: #222; color: #999; font-size: 0.9rem;">
     © 2026 MenuClick — Soluciones Gastronómicas Digitales<br>
     menuclick99@gmail.com
-</footer>
+  </footer>
 
-<a href="https://wa.me/5491123140119" class="whatsapp" target="_blank">
-    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="white" viewBox="0 0 16 16">
-        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.601 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
-    </svg>
-</a>
+  <a href="https://wa.me/5491123140119" class="whatsapp" target="_blank">
+    <svg width="35" height="35" fill="white" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.601 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+  </a>
 
-<script>
+  <script>
     document.addEventListener("DOMContentLoaded", function() {
-        const videoElement = document.getElementById('videoMenuClick');
-        
-        // Lista de tus videos
-        const videos = [
+        const videosParaRotar = [
             "img/0411(3).mp4", 
             "img/video1.mp4", 
             "img/video2.mp4"
         ];
-        
-        let currentVideo = 0;
 
-        if (videoElement) {
-            videoElement.onended = function() {
-                currentVideo++;
-                if (currentVideo >= videos.length) {
-                    currentVideo = 0; 
-                }
-                videoElement.src = videos[currentVideo];
-                videoElement.play().catch(error => console.log("Error al reproducir:", error));
+        function configurarVideo(id) {
+            const v = document.getElementById(id);
+            if (!v) return;
+            let i = 0;
+            v.onended = function() {
+                i = (i + 1) % videosParaRotar.length;
+                v.src = videosParaRotar[i];
+                v.play();
             };
         }
+
+        configurarVideo('video1');
+        configurarVideo('video2');
     });
-</script>
+  </script>
 
 </body>
 </html>
